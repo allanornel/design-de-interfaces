@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 150px;
 }
 
 header {
@@ -88,7 +91,7 @@ form fieldset {
     flex-direction: column;
 }
 
-form input, form textarea {
+form input, form textarea, form select {
     max-width: 400px;
     margin: 10px 0;
 }
@@ -105,10 +108,21 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
+    position: absolute;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
+    body p {
+        font-size: 12px;
+    }
+
+    .content img {
+        max-width: 100%;
+        height: 300px;
+        margin: 10px 0;
+    }
+
     header {
         flex-direction: column;
     }
@@ -116,5 +130,8 @@ footer {
     nav ul {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
     }
 }
